@@ -1,5 +1,5 @@
 from flask import Flask
-
+"""web启动"""
 app = Flask(__name__)
 
 
