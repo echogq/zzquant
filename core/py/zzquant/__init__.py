@@ -33,17 +33,4 @@ else:
     __version__ = get_version()
 
 
-# 日志系统配置
-# 1
-file_log = os.path.dirname(os.path.abspath(__file__))+"zzq.log"
-handler = RotatingFileHandler(file_log, maxBytes=1024 * 1024 * 10, backupCount=10, encoding='utf-8')
-fmt = '%(asctime)s - %(filename)s:%(lineno)s - func: [%(name)s] - %(message)s'
-# 2
-formatter = logging.Formatter(fmt)
-handler.setFormatter(formatter)
-
-log = logging.getLogger(__name__)
-
-log.addHandler(handler)
-log.setLevel(logging.DEBUG)
 
